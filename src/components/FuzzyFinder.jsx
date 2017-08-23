@@ -1,10 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import fuzzyfinder from 'fuzzyfinder';
 
 import SearchInput from './SearchInput.jsx';
 import SearchResultsList from './SearchResultsList.jsx';
-import randomWords from '../data/random-words';
-import reactPaths from '../data/react-paths';
 
 class FuzzyFinder extends React.Component {
   constructor(props) {
@@ -12,19 +11,22 @@ class FuzzyFinder extends React.Component {
 
     this.state = {
       results: [],
-      data: reactPaths,
-      changeEvents: [],
     };
 
+    // Builds a fuzzyfinder wrapping matched characters with <b> tags
     this.ff = new fuzzyfinder('<b>', '</b>');
 
     // Bind callbacks
     this.handleSearchInputChange = this.handleSearchInputChange.bind(this);
   }
 
+  /**
+   * Handle SearchInput change events and perform a fuzzyfinder
+   * search
+   */
   handleSearchInputChange(value) {
     this.setState({
-      results: this.ff.search(value, this.state.data),
+      results: this.ff.search(value, this.props.getData()),
     });
   }
 
@@ -37,5 +39,9 @@ class FuzzyFinder extends React.Component {
     );
   }
 }
+
+FuzzyFinder.propTypes = {
+  getData: PropTypes.func.isRequired,
+};
 
 export default FuzzyFinder;
