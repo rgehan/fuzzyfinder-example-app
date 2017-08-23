@@ -25,8 +25,13 @@ class FuzzyFinder extends React.Component {
    * search
    */
   handleSearchInputChange(value) {
+    let results = this.ff.search(value, this.props.getData(), {
+      highlight: true,
+      outputFull: false,
+    }).map(obj => obj.text);
+
     this.setState({
-      results: this.ff.search(value, this.props.getData()),
+      results,
     });
   }
 
