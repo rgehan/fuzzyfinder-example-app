@@ -9,6 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
+        <h1>fuzzyfinder-example-app</h1>
+        <p>Use the input below to search with the FuzzyFinder</p>
         <FuzzyFinder getData={() => reactPaths} />
       </div>
     );
