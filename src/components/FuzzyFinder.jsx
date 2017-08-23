@@ -4,6 +4,7 @@ import fuzzyfinder from 'fuzzyfinder';
 import SearchInput from './SearchInput.jsx';
 import SearchResultsList from './SearchResultsList.jsx';
 import randomWords from '../data/random-words';
+import reactPaths from '../data/react-paths';
 
 class FuzzyFinder extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class FuzzyFinder extends React.Component {
 
     this.state = {
       results: [],
-      data: randomWords,
+      data: reactPaths,
+      changeEvents: [],
     };
 
     this.ff = new fuzzyfinder('<b>', '</b>');
