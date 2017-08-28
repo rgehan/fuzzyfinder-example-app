@@ -1,5 +1,7 @@
 # [fuzzyfinder-example-app](https://github.com/rgehan/fuzzyfinder-example-app)
 
+![Screenshot](image.png)
+
 This is an example React application demonstrating how [rgehan/fuzzyfinder](https://github.com/rgehan/fuzzyfinder) can be used.
 
 ## Installation
