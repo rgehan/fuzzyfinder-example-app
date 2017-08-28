@@ -1663,9 +1663,9 @@ function-bind@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
-fuzzyfinder@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/fuzzyfinder/-/fuzzyfinder-1.3.1.tgz#3e8ff5b6b5c390779be7d31e22682fa7a6b5191c"
+fuzzyfinder@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/fuzzyfinder/-/fuzzyfinder-1.4.2.tgz#4b31a1da5966e4751c9a2b6dd4d2f4126a5d0a84"
 
 gauge@~2.7.3:
   version "2.7.4"
